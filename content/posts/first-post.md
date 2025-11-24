@@ -1,6 +1,6 @@
 +++
 date = '2025-11-24T20:25:20+09:00'
-draft = true
+draft = false
 title = '現実逃避でホームページを生やした男'
 +++
 # こんにちは Hugo
