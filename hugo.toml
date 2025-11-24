@@ -2,7 +2,9 @@ baseURL = 'https://wkiym.github.io/blog_test/'
 languageCode = 'ja-jp'
 title = 'blog_test'
 theme = 'ananke'
+relativeURLs = true
+canonifyURLs = true
 
 [params]
-  description = "TEST"
+  description = "Hugo + GitHub Pages テストサイト"
   mainSections = ["posts"]
