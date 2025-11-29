@@ -1,0 +1,33 @@
+{{ define "main" }}
+<main class="pa3 pa4-ns w-100 w-70-ns center">
+
+    <section class="pv4">
+        <h1 class="f2 lh-title">最近の投稿</h1>
+    </section>
+
+    <section class="flex-ns flex-wrap justify-around mt3">
+        {{ range .Site.RegularPages.ByDate.Reverse }}
+        <article class="mv4 w-100 w-30-l ph3">
+            <header>
+                <h2 class="f3 lh-title">
+                    <a href="{{ .RelPermalink }}" class="link dim dark-gray">
+                        {{ .Title }}
+                    </a>
+                </h2>
+
+                {{ with .Date }}
+                <p class="f6 gray mt1 mb0">{{ .Format "2006-01-02" }}</p>
+                {{ end }}
+            </header>
+
+            {{ with .Params.description }}
+            <p class="lh-copy mt2">
+                {{ . }}
+            </p>
+            {{ end }}
+        </article>
+        {{ end }}
+    </section>
+
+</main>
+{{ end }}
