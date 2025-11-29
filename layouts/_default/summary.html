@@ -1,0 +1,23 @@
+<!-- layouts/_default/summary.html -->
+
+<article class="pv4 bt bb b--black-10">
+  <header>
+    <h1 class="f3 fw6 lh-title mv0">
+      <a href="{{ .RelPermalink }}" class="link black dim">
+        {{ .Title }}
+      </a>
+    </h1>
+
+    {{ with .Date }}
+      <p class="f6 gray mt1 mb0">{{ .Format "2006-01-02" }}</p>
+    {{ end }}
+  </header>
+
+  <section class="mt2">
+    {{ with .Description }}
+      <p class="f5 lh-copy measure mv0">
+        {{ . }}
+      </p>
+    {{ end }}
+  </section>
+</article>
